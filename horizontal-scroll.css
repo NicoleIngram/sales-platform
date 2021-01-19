@@ -1,0 +1,778 @@
+
+/*=====================================================
+ Reset 
+ =====================================================*/
+
+
+img {
+  display: block;
+  height:auto;
+  max-width:100%;
+}
+
+
+/* Make input text line up with other text */
+/*input,select{
+  vertical-align: middle;
+}*/
+
+/* Kill default borders on fieldsets */
+fieldset{
+  border: none;
+}
+
+/* It's rare to want an inline textarea */
+textarea{
+  display: block;
+}
+
+a {
+  text-decoration: none;
+}
+
+/*border-box makes everything easy*/
+html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address,cite,code,del,dfn,em,ins,kbd,q,samp,small,strong,sub,sup,var,b,i,dl,dt,dd,ol,ul,li,fieldset,input,select,textarea,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,figure,footer,header,nav,section,main{
+  background:transparent;
+  border:0;
+  box-sizing:border-box;
+  font-size:100%;
+  margin: 0;
+  outline:0;
+  padding:0;
+  vertical-align:baseline;
+}
+
+button,input,optgroup,select,textarea{color:inherit;font:inherit;margin:0}
+button{overflow:visible}
+button,select{text-transform:none}
+button,html input[type=button],input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer}
+button[disabled],html input[disabled]{cursor:default}
+button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}
+input{line-height:normal}
+input[type=checkbox],input[type=radio]{box-sizing:border-box;padding:0}
+input[type=number]::-webkit-inner-spin-button,input[type=number]::-webkit-outer-spin-button{height:auto}
+input[type=search]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box}
+input[type=search]::-webkit-search-cancel-button,input[type=search]::-webkit-search-decoration{-webkit-appearance:none}
+fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}
+table{border-collapse:collapse;border-spacing:0}
+
+
+/*html { box-sizing: border-box; }
+*, *:before, *:after { box-sizing: inherit; }
+img { max-width: 100%; border: 0; }
+audio, canvas, iframe, img, svg, video { vertical-align: middle; } /* Remove gaps between elements */
+/*nav ul, nav ol { list-style-type: none; padding: 0; margin: 0; } /* Remove bullets from lists in nav */
+/*textarea { resize: vertical; }
+.clearfix:before, .clearfix:after { content: " "; display: table; }
+.clearfix:after { clear: both; }*/
+
+html {
+  font-family: 'Source Sans Pro', sans-serif;
+  margin: auto;
+
+/* SCHOOL COLORS*/
+--osu-orange: #FE5C00;
+--ou-maroon: #841617;
+--uconn-navy: #000E2F;
+--iowa-maroon: #951010;
+--washington-purple: #4B2E83;
+
+/* DIGITAL SEAT COLORS*/
+--dsm-medium-blue: #48A8FF;
+--dsm-dark-blue: #4069FF;
+
+/* CONTAINER SIZES*/
+--landscape-small: 20vh;
+--landscape-medium: 38vh;
+--portrait-large: 60vh;
+
+}
+
+body {
+	margin: auto;
+}
+
+section {
+  margin: 0 auto 1rem;
+}
+
+.module-title {
+  margin: 5vh 5vw 2.5vh;
+  font-size: 6.5vw;
+  padding: 0;
+}
+
+
+.sponsor-device, .social-device {
+  width: 100vw;
+  height: 25vh;
+ /* background: #f2f2f2;*/
+  margin: 0 auto;
+  overflow: scroll;
+}
+
+.sidebar {
+  width: 640px;
+  padding-left: 3vw;
+}
+
+.sponsor-device .widget {
+  display: inline-block;
+  background-color: white;
+  border-radius: 10px;
+   box-shadow: 8px 8px 10px rgba(100, 100, 100, 0.2),
+              0 0 1rem 5px rgba(100, 100, 100, 0.1);
+  width: 42vw;
+  height: 20vh;
+  margin: 2.5vh 0 2vh 2vw;
+  position: relative;
+}
+
+.sponsor-device img {
+  max-width: 50%;
+  margin: auto;
+  padding: 20%;
+}
+
+.social-device .widget {
+    display: inline-block;
+  background: #fff;
+  border-radius: 10px;
+   box-shadow: 8px 8px 10px rgba(100, 100, 100, 0.2),
+              0 0 1rem 5px rgba(100, 100, 100, 0.1);
+  width: 42vw;
+  height: 20vh;
+  margin: 2.5vh 0 2vh 2vw;
+  position: relative;
+  text-align: center;
+  font-size: 2.5vh;
+}
+
+.social-device img {
+  margin: auto;
+  display: flex;
+  align-items: center;
+  max-height: 50%;
+  margin: 12% auto 8%;
+}
+
+/** PIZZA HUT LANDSCAPE**/
+
+.pizza-hut {
+  background-image: url(images/p-hut-pizza.jpg);
+  background-size: cover;
+  border-radius: 10px;
+  box-shadow: .25rem .25rem .75rem rgba(100, 100, 100, 0.6),
+              0 0 .2rem .5rem rgba(100, 100, 100, 0.1);
+  width: 90vw;
+  height: 20vh;
+  position: relative;
+}
+
+.pizza-hut .contents {
+  position: absolute;
+  bottom: 0;
+  background-color: var(--ou-maroon);
+  border-radius: 0 0 10px 10px;
+  display: flex;
+  align-items: center;
+  height: 8.25vh;
+  padding: 0 3vw 0;
+}
+
+.pizza-hut .contents a {
+  text-transform: uppercase;
+  white-space: nowrap;
+  text-decoration: none;
+  color: black;
+  display: inline;
+  background-color: white;
+  font-size: 5vw;
+  font-weight: 700;
+  border-radius: 5px;
+  padding: 1vw 8vw;
+}
+
+.pizza-hut p {
+  color: white;
+  font-size: 1rem;
+  font-size: 4vw;
+}
+
+
+/** IN N OUT SPONSOR CARD SPECS LARGE**/
+
+.portrait-offer-large {
+  box-shadow: 8px 8px 10px rgba(100, 100, 100, 0.5), 0 0 1rem 5px rgba(100, 100, 100, 0.1);
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  height: 60vh;
+  width: 90vw;
+ 
+}
+
+.portrait-offer-large .img-container {
+  position: relative;
+  background-image: url(images/in-n-out-burger.jpg);
+  background-size: cover;
+  height: 70%;
+  border-radius: 10px 10px 0px 0px;
+}
+
+.portrait-offer-large .logo-container {
+  position: absolute;
+  background-image: url(images/logos/in-n-out-burger-logo.png);
+  background-size: cover;
+  top: 75%;
+  left: 5%;
+  width: 25%;
+  height: 28%;
+  border-radius: 10px;
+  box-shadow: 8px 8px 10px rgba(100, 100, 100, 0.2);
+  background-color: white;
+}
+
+.portrait-offer-large h2{
+  font-size: 7vh;
+  text-shadow: 4px 3px 4px rgba(100, 100, 100, 1);
+  color: white;
+  padding: 1rem;
+}
+
+
+.portrait-offer-large .content {
+  margin: 0 auto;
+  padding: 5%;
+  background-color: white;
+  font-weight: 700;
+  border-radius: 0px 0px 10px 10px;
+}
+
+.portrait-offer-large .content p {
+  margin-bottom: 5%;
+  font-weight: 700;
+  font-size: 2.25vh;
+}
+
+.portrait-offer-large .content a {
+  background-color: red;
+  max-width: 45vw;
+  color: white;
+  border-radius: 10px;
+  padding: .3rem 1.7rem;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 5vw;
+  position: absolute;
+  right: 10%;
+
+}
+
+/** CARD SPECS TRIVIA**/
+
+
+.trivia {
+  box-shadow: 8px 8px 10px rgba(100, 100, 100, 0.5);
+  border-radius: 10px;
+  font-weight: 700;
+  height: var(--landscape-medium);
+  width: 90vw;
+  display: flex;
+  flex-direction: column;
+}
+
+.trivia img {
+  max-width: 100%;
+  border-radius: 10px 10px 0 0;
+}
+
+.trivia .info-container {
+  padding: 0 1rem;
+  margin: 0;
+}
+
+.trivia h2 {
+  font-size: 3vh;
+}
+
+
+.trivia .medium-button {
+  background-color: var(--uconn-navy);
+  color: white;
+  width: 60vw;
+  padding: 2% 4%;
+  border-radius: 10px;
+  margin: auto;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+/** AR FILTER SPECS**/
+
+.ar-filter {
+  box-shadow: 8px 8px 10px rgba(100, 100, 100, 0.5), 0 0 1rem 5px rgba(100, 100, 100, 0.1);
+  border-radius: 0;
+  height: 50vh;
+  width: 70vw;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.ar-filter h2 {
+  font-size: 3.5vh;
+  font-weight: 600;
+  margin-bottom: 3vh;
+}
+
+
+.ar-filter .product {
+  height: 50%;
+  margin: auto;
+}
+
+
+.ar-filter .cta {
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+}
+
+.ar-filter .cta img {
+  width: 18%;
+}
+
+.ar-filter .cta div {
+  background-color: var(--osu-orange);
+  color: white;
+  text-transform: uppercase;
+  font-size: 3vh;
+  font-weight: 700;
+  width: 20vw;
+  height: 4vh;
+  padding: .25rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  box-shadow: 8px 8px 10px rgba(100, 100, 100, 0.5), 0 0 1rem 5px rgba(100, 100, 100, 0.1);
+}
+
+
+/** CARD SPECS LIVE STATS**/
+
+.landscape-medium {
+  border-radius: 10px;
+  box-shadow: 8px 8px 10px rgba(100, 100, 100, 0.5), 0 0 1rem 5px rgba(100, 100, 100, 0.1);
+  font-weight: 700;
+  height: var(--landscape-medium);
+  width: 90vw;
+  margin: auto;
+}
+
+.landscape-medium .stats {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  font-size: 3vh;
+}
+
+.landscape-medium .score {
+  display: flex;
+  justify-content: space-between;
+  max-width: 55vw;
+  margin: auto;
+}
+
+.landscape-medium .team-container {
+  margin-bottom: 10%;
+  width: 40vw;
+  height: 15vh;
+}
+
+.landscape-medium .team-container h2{
+  font-size: 2rem;
+  margin-bottom: 5%;
+  text-align: center;
+}
+
+.landscape-medium .logo-container img {
+  width: 40%;
+  margin: auto;
+}
+
+
+.landscape-medium .medium-button {
+  background-color: var(--ou-maroon);
+  color: white;
+  padding: 1.25vh 5vw;
+  max-width: 60vw;
+  border-radius: 10px;
+  margin: auto;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 3.2vh;
+}
+
+/** CARD SPECS LARGE**/
+
+.enter-to-win {
+  box-shadow: 8px 8px 10px rgba(100, 100, 100, 0.5), 0 0 1rem 5px rgba(100, 100, 100, 0.1);
+  border-radius: 1rem;
+  height: var(--portrait-large);
+  width: 90%;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+}
+
+.enter-to-win p {
+  font-size: 2.5vh;
+  font-weight: 600;
+  margin-bottom: 5%;
+}
+
+.enter-to-win .card-title {
+  display: flex;
+  margin-bottom: 5%;
+}
+
+.enter-to-win .card-title img{
+  height: 2.75vh;
+  margin: 2%;
+  display: flex;
+}
+
+.enter-to-win .product {
+  max-height: 55%;
+  margin:  10% auto 0;
+}
+
+
+.enter-to-win .cta {
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+}
+
+.enter-to-win .cta img {
+  width: 5vh;
+}
+
+.enter-to-win .cta div {
+  background-color: var(--ou-maroon);
+  color: white;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  font-weight: 700;
+  width: 160px;
+  height: 30px;
+  padding: .25rem;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+
+/** MERCH CARD SPECS LARGE**/
+
+.merch {
+  box-shadow: 8px 8px 10px rgba(100, 100, 100, 0.5), 0 0 1rem 5px rgba(100, 100, 100, 0.1);
+  border-radius: 1rem;
+  height: var(--portrait-large);
+  width: 90%;
+  margin: auto;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.merch p {
+  font-size: 2.5vh;
+  margin: 5% 0;
+}
+
+
+.merch .card-title img{
+  height: 6.5vh;
+}
+
+.merch .product {
+  max-height: 55%;
+  margin: 0 auto;
+}
+
+
+.merch .cta {
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+}
+
+.merch .cta p {
+  font-weight: 700;
+  margin: 0;
+}
+
+.merch .cta div {
+  background-color: var(--iowa-maroon);
+  color: white;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  font-weight: 700;
+  width: 40vw;
+  height: 4.5vh;
+  padding: .25rem;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+
+/** CARD SPECS DIGITAL PROGRAM**/
+
+.dig-program {
+  box-shadow: 8px 8px 10px rgba(100, 100, 100, 0.5), 0 0 1rem 5px rgba(100, 100, 100, 0.1);
+  font-weight: 700;
+  height: var(--landscape-medium);
+  width: 90vw;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.dig-program img {
+  max-width: 100%;
+}
+
+
+.dig-program .team-container {
+  margin-bottom: 2rem;
+}
+
+.dig-program .team-container h2{
+  font-size: 2rem;
+  margin-bottom: .75rem;
+  text-align: center;
+}
+
+.dig-program .info-container {
+  padding: 1rem;
+}
+
+.dig-program h3 {
+  font-size: 2vh;
+  margin-bottom: 3.5vh;
+}
+
+
+.dig-program .medium-button {
+  background-color: var(--osu-orange);
+  box-shadow: 8px 8px 10px rgba(100, 100, 100, 0.5);
+  text-transform: uppercase;
+  color: white;
+  margin: auto;
+  padding: 2.5% 10%;
+  text-align: center;
+  font-size: 3vh;
+}
+
+
+/** CARD SPECS FAN VIP CARD**/
+
+.fan-vip {
+  box-shadow: 8px 8px 10px rgba(100, 100, 100, 0.5), 0 0 1rem 5px rgba(100, 100, 100, 0.1);
+  font-weight: 700;
+  height: var(--landscape-medium);
+  width: 90%;
+  margin: auto;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.fan-vip img {
+  width: 30%;
+  margin: auto;
+}
+
+.fan-vip h3 {
+  font-size: 2.75vh;
+}
+
+.fan-vip .medium-button {
+  background-color: var(--washington-purple);
+  box-shadow: 8px 8px 10px rgba(100, 100, 100, 0.5);
+  color: white;
+  margin: auto;
+  padding: 2.5% 10%;
+  text-align: center;
+  font-size: 3vh;
+}
+
+/** CARD SPECS UBER**/
+
+.uber-card {
+  box-shadow: 8px 8px 10px rgba(100, 100, 100, 0.5);
+  height: var(--landscape-medium);
+  width: 90%;
+  background-image: url(images/uber-bkgrnd.jpg);
+  background-size: cover;
+  background-position: center;
+  padding: 1rem;
+  margin: auto;
+  position: relative;
+}
+
+.uber-card .logo {
+  max-height: 55px;
+}
+
+.uber-card .cta-info img {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  bottom: 7%;
+}
+
+.uber-card .uber-arrow {
+  bottom: 7%;
+  right: 5%;
+}
+
+
+
+
+/** CARD SPECS PUSH NOTIFICATION**/
+
+.push {
+  box-shadow: 8px 8px 10px rgba(100, 100, 100, 0.2),
+              0 0 1rem 5px rgba(100, 100, 100, 0.1);
+  border-radius: 10px;
+  font-weight: 700;
+  margin: 0 auto 2rem;
+  padding: .5rem;
+  width: 90%;
+  height: var(--landscape-small);
+  display: flex;
+  flex-direction: column;
+}
+
+.push .info-container {
+  padding: 1rem;
+}
+
+.push #open-modal {
+	background-color: var(--dsm-dark-blue);
+  width: 50vw;
+  height: 6vh;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  font-weight: 700;
+  font-size: 3vh;
+  text-align: center;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.push h2 {
+  font-size: 2.5vh;
+  text-align: center;
+}
+
+dialog {
+  border: none;
+  border-radius: 10px;
+  width: 90%;
+  height: var(--portrait-large);
+  padding: 0;
+  position: relative;
+}
+
+dialog img {
+  width: 100%;
+}
+
+dialog .laptop {
+	margin-bottom: 6vh;
+}
+
+dialog .close {
+  height: 3vh;
+  position: absolute;
+  right: -42%;
+  top: 2.5%;
+}
+
+ dialog p {
+  font-size: 3vh;
+  font-weight: 500;
+ }
+
+ dialog div {
+  background-color: white;
+  border-radius: 10px;
+  padding: 1rem;
+
+ }
+
+ dialog::backdrop {
+  background-color: rgba(0, 0, 0, .5);
+ }
+
+/*input[type=submit], button {
+  background-color: #4069FF;
+  width: 50vw;
+  height: 6vh;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  font-weight: 700;
+  font-size: 3vh;
+  text-align: center;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}*/
+
+
+dialog .btn-default {
+	background-color: var(--ou-maroon);
+  width: 50vw;
+  height: 6vh;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  font-weight: 700;
+  font-size: 3vh;
+  text-align: center;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+input[type=submit]:focus, dialog .btn-default:active, dialog .btn-default a:focus, dialog .btn-default a:hover {
+	outline: none;
+}
+
+
+
+
+
+
+
+
+
+
+
